@@ -10,9 +10,11 @@
 }
 
 .card {
-    background-color: teal;
     border: solid black 1px;
     border-radius: 8px;
-    height: 50px;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
 }
