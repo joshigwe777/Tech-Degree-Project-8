@@ -42,7 +42,7 @@ fetch(urlAPI)
                     <p class="address">${city}</p>
                 </div>
             </div>
-            `
+            `;
             gridContainer.innerHTML = employeeHTML; 
         
         });
