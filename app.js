@@ -24,16 +24,17 @@ fetch(urlAPI)
         employees = employeeData;
         
         //store employee html as we create it
-        let employeeHTML = '';
+        gridContainer.innerHTML = '';
 
         //loop through each employee data and create html as we create it
         employees.forEach((employee, index) => {
             let name = employee.name;
-            let email = employee.emil;
+            let email = employee.email;
+            let street = employee.location.street;
             let city = employee.location.city;
-            let picture = employee.picutre;
-
-            employee.employeeHTML += `
+            let picture = employee.picture;
+            console.log(employee.location.street);
+            gridContainer.innerHTML += `
             <div class= "card" data-index="${index}">
                 <img class= "avatar" src="${picture.large}" />
                 <div class="text-container">
@@ -43,7 +44,7 @@ fetch(urlAPI)
                 </div>
             </div>
             `;
-            gridContainer.innerHTML = employeeHTML; 
+
         
         });
     }
@@ -72,15 +73,15 @@ fetch(urlAPI)
         modalContainer.innerHTML = modalHTML;
     }
 
-    // gridContainer.addEventListener('click', e => {
-        // if (e.target !== gridContainer) {
+     gridContainer.addEventListener('click', e => {
+         if (e.target !== gridContainer) {
             
-            // const card = e.target.closest(".card");
-            // const index = card.getAttribute('data-index');
+             const card = e.target.closest(".card");
+            const index = card.getAttribute('data-index');
 
-            // displayModal(index);
-        // }
-    // });
+            displayModal(index);
+        }
+     });
 
     modalClose.addEventListener('click', () => {
         overlay.classList.add("hidden");

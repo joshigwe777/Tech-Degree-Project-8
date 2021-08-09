@@ -1,10 +1,15 @@
 * {
     box-sizing: border-box;
-    background-color: rgb(236, 235, 235);
+    background-color: rgb(172, 176, 228);
+    font-family: 'Martel', serif;
 }
 
 .body {
     position: relative;
+}
+
+h1 {
+    text-align: center;
 }
 
 .container {
@@ -29,6 +34,13 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 1rem;
+}
+
+.avatar {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-right: 1rem;
 }
 
 .modal {
@@ -36,10 +48,13 @@
     margin: 15% auto auto;
     position: relative;
     text-align: center;
-    background: #fff;
     border: 1px solid #778;
     border-radius: 5px;
-    padding: 30px 20px;
+    padding: 15px 10px;
+}
+
+.modal .avatar {
+    margin-top: 1rem;
 }
 
 .modal-close {
